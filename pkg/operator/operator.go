@@ -87,6 +87,8 @@ func New(ctx context.Context, config operatorconfig.Config, kubeConfig *rest.Con
 		return nil, fmt.Errorf("failed to get current feature gates: %w", err)
 	}
 
+	logrus.Info("Starting Cluster DNS Operator")
+
 	dnsNameResolverEnabled := featureGates.Enabled(features.FeatureGateDNSNameResolver)
 
 	operatorManager, err := manager.New(kubeConfig, manager.Options{
