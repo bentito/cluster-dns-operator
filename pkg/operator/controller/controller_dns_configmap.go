@@ -22,9 +22,10 @@ import (
 )
 
 const (
+	// resolvConf is the location of the host's resolv.conf file.
 	resolvConf       = "/etc/resolv.conf"
-	defaultDNSPort   = 53
-	lameDuckDuration = 20 * time.Second
+	lameDuckDuration = 30 * time.Second
+)
 
 	// cacheDefaultMaxPositiveTTLSeconds is the default maximum TTL that the
 	// operator configures CoreDNS to enforce for positive (NOERROR)

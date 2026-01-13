@@ -81,6 +81,14 @@ Example -
  make cluster-build DEPLOY=1 V=1
 ```
 
+#### Checking Logs
+
+You can check the operator logs using:
+
+```
+$ oc logs -n openshift-dns-operator deployment/dns-operator -f
+```
+
 ## Tests
 
 Run unit tests:
